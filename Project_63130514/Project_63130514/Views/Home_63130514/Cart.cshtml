@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Project_63130514.Models.MonAn>
+
+@{
+    ViewBag.Title = "Cart";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="heading">
+    <h3>Giỏ hàng</h3>
+    <p><a href="~/Home/Index">Trang chủ </a> <span> / Giỏ hàng</span></p>
+</div>
+
+<section class="products">
+    <h1 class="title">Giỏ hàng của bạn</h1>
+
+    <div class="cart-total">
+        <p>grand total : <span>$9/-</span></p>
+        <a href="~/Home_63130514/Checkout" class="btn">thanh toán</a>
+    </div>
+
+    <div class="box-container">
+
+        <div class="box">
+            <a href="~/MonAns_63130514/Details" class="fas fa-eye"></a>
+            <button class="fas fa-times" type="submit" name="delete" onclick="return confirm('delete this item?')"></button>
+            <img src="~/Images/pizza-1.png" alt="">
+            <div class="name">delicious pizza 01</div>
+            <div class="flex">
+                <div class="price"><span>$</span>3</div>
+                <input type="number" name="qty" class="qty" min="1" max="99" value="1" onkeypress="if(this.value.length == 2) return false;">
+                <button type="submit" class="fas fa-edit"></button>
+            </div>
+            <div class="sub-total">sub total : <span>$3</span></div>
+        </div>
+
+        <div class="box">
+            <a href="~/MonAns_63130514/Details" class="fas fa-eye"></a>
+            <button class="fas fa-times" type="submit" name="delete" onclick="return confirm('delete this item?')"></button>
+            <img src="~/Images/dish-2.png" alt="">
+            <div class="name">main dish 02</div>
+            <div class="flex">
+                <div class="price"><span>$</span>3</div>
+                <input type="number" name="qty" class="qty" min="1" max="99" value="1" onkeypress="if(this.value.length == 2) return false;">
+                <button type="submit" class="fas fa-edit"></button>
+            </div>
+            <div class="sub-total">sub total : <span>$3</span></div>
+        </div>
+
+        <div class="box">
+            <a href="~/MonAns_63130514/Details" class="fas fa-eye"></a>
+            <button class="fas fa-times" type="submit" name="delete" onclick="return confirm('delete this item?')"></button>
+            <img src="~/Images/dessert-1.png" alt="">
+            <div class="name">delicious dessert 01</div>
+            <div class="flex">
+                <div class="price"><span>$</span>3</div>
+                <input type="number" name="qty" class="qty" min="1" max="99" value="1" onkeypress="if(this.value.length == 2) return false;">
+                <button type="submit" class="fas fa-edit"></button>
+            </div>
+            <div class="sub-total">sub total : <span>$3</span></div>
+        </div>
+
+    </div>
+
+    <div class="more-btn">
+        <a href="#" class="delete-btn" onclick="return confirm('delete all from cart?');">Xóa tất cả</a>
+    </div>
+</section>
+
+

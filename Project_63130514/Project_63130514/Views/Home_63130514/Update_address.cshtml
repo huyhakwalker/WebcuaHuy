@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Project_63130514.Models.MonAn>
+@{
+    ViewBag.Title = "Update_address";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<section class="form-container">
+
+    <form action="" method="post">
+        <h3>Địa chỉ của bạn</h3>
+        <input type="text" maxlength="50" placeholder="Họ tên" required class="box" name="flat">
+        <input type="text" maxlength="50" placeholder="Số điện thoại" required class="box" name="street">
+        <input type="text" maxlength="50" placeholder="Tỉnh/Thành phố, Quận/Huyện, Phường/Xã" required class="box" name="city">
+        <input type="text" maxlength="50" placeholder="Địa chỉ cụ thể" required class="box" name="state">
+        <input type="submit" value="lưu" name="submit" class="btn">
+    </form>
+
+</section>

@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Project_63130514.Models.MonAn>
+@{
+    ViewBag.Title = "Update_profile";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<section class="form-container">
+
+    <form action="" method="POST">
+        <h3>Cập nhật thông tin cá nhân</h3>
+        <input type="text" required maxlength="20" name="name" placeholder="Họ và tên" class="box" >
+        <input type="email" required maxlength="50" name="email" placeholder="Email" class="box" >
+        <input type="text"  placeholder="Số điện thoại" required class="box" name="number">
+        <input type="password" maxlength="20" name="old_pass" placeholder="Mật khẩu cũ" class="box">
+        <input type="password" maxlength="20" name="new_pass" placeholder="Mật khẩu mới" class="box">
+        <input type="password" maxlength="20" name="confirm_pass" placeholder="Xác nhận mật khẩu mới" class="box">
+        <input type="submit" value="Cập nhật ngay" class="btn" name="submit">
+    </form>
+
+</section>

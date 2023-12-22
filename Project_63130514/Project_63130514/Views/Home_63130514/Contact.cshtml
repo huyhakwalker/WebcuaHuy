@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Project_63130514.Models.MonAn>
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="heading">
+    <h3>Liên hệ với chúng tôi</h3>
+    <p><a href="~/Home_63130514_63130514/Index">Trang chủ </a> <span> / Liên hệ</span></p>
+</div>
+
+<section class="contact">
+
+    <div class="row">
+
+        <div class="image">
+            <img src="~/Images/contact-img.svg" alt="">
+        </div>
+
+        <form action="" method="post">
+            <h3>nhận xét về chúng tôi!</h3>
+            <input type="text" name="name" required placeholder="Nhập tên của bạn" maxlength="50" class="box">
+            <input type="number" name="number" required placeholder="Nhập số điện thoại" class="box" >
+            <input type="email" name="email" required placeholder="Nhập email" maxlength="50" class="box">
+            <textarea name="msg" placeholder="Nhận xét" required class="box" cols="30" rows="10" maxlength="500"></textarea>
+            <input type="submit" value="Gửi" class="btn" name="send">
+        </form>
+
+    </div>
+
+</section>

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Project_63130514.Models.MonAn>
+
+@{
+    ViewBag.Title = "Checkout";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="heading">
+    <h3>checkout</h3>
+    <p><a href="~/Home_63130514/Index">Trang chủ </a> <span> / Thanh toán</span></p>
+</div>
+
+<section class="checkout">
+
+    <h1 class="title">Đơn hàng của bạn</h1>
+
+    <form action="" method="post">
+        <div class="cart-items">
+            <h3>Danh sách sản phẩm</h3>
+            <p><span class="name">delicious pizza 01</span><span class="price">$3</span></p>
+            <p><span class="name">main dish 02</span><span class="price">$3</span></p>
+            <p><span class="name">delicious dessert 01</span><span class="price">$3</span></p>
+            <p class="grand-total"><span class="name">grand total :</span> <span class="price">$9</span></p>
+            <a href="~/Home_63130514/Cart" class="btn">xem giỏ hàng</a>
+        </div>
+        <div class="user-info">
+            <h3>your info</h3>
+            <p><i class="fas fa-user"></i> <span>shaikh anas</span></p>
+            <p><i class="fas fa-phone"></i> <span>1234567890</span></p>
+            <p><i class="fas fa-envelope"></i> <span>shaikhanas@gmail.com</span></p>
+            <a href="~/Home/Update_profile" class="btn">cập nhật thông tin</a>
+            <h3>delivery address</h3>
+            <p class="address"><i class="fas fa-map-marker-alt"></i> <span>flat no. 1, building no. 1, jogeshwari west, mumbai, india - 400104</span></p>
+            <a href="~/Home/Update_address" class="btn">cập nhật địa chỉ</a>
+            <select name="method" class="box" required>
+                <option value="" disabled selected>Chọn hình thức thanh toán</option>
+                <option value="cash on delivery">Thanh toán khi nhận hàng</option>
+                <option value="credit card">Thẻ tín dụng</option>
+                <option value="paypal">Paypal</option>
+            </select>
+        </div>
+        <input type="submit" value="Đặt hàng" name="order" class="btn order-btn">
+    </form>
+
+</section>

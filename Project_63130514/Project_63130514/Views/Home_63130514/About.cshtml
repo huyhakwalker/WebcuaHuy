@@ -1,0 +1,171 @@
+﻿@model IEnumerable<Project_63130514.Models.MonAn>
+
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<section class="about">
+
+    <div class="row">
+
+        <div class="image">
+            <img src="~/Images/about-img.svg" alt="">
+        </div>
+
+        <div class="content">
+            <h3>Tại sao bạn nên chọn nhà hàng của Huy?</h3>
+            <p>Chào mừng đến với nhà hàng của tôi! Tại đây, chúng tôi tự hào giới thiệu một không gian ấm áp và phong cách cùng với những món ăn tuyệt vời. Nhà hàng của chúng tôi không chỉ là nơi thưởng thức các món ăn ngon mà còn là trải nghiệm về hương vị và sự sáng tạo. Với đội ngũ đầu bếp tài năng và đam mê, chúng tôi cam kết mang đến cho khách hàng những món ăn tươi ngon, hấp dẫn và đa dạng từ khắp nơi trên thế giới.</p>
+            <a href="~/MonAns_63130514/Index" class="btn">Menu</a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="steps">
+
+    <h1 class="title">3 Bước đơn giản</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="~/Images/step-1.png" alt="">
+            <h3>chọn món</h3>
+            <p>Một Menu với đa dạng món ăn đang đợi bạn.</p>
+        </div>
+
+        <div class="box">
+            <img src="~/Images/step-2.png" alt="">
+            <h3>giao hàng trong 30 phút</h3>
+            <p>Giao hàng nhanh chóng.</p>
+        </div>
+
+        <div class="box">
+            <img src="~/Images/step-3.png" alt="">
+            <h3>thưởng thức!</h3>
+            <p>Tận hưởng các món ăn thật ngon miệng.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="reviews">
+
+    <h1 class="title">Đánh giá của khách hàng</h1>
+
+    <div class="swiper reviews-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide slide">
+                <img src="~/Images/pic-1.png" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo exercitationem ullam esse quia iusto in.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>john deo</h3>
+            </div>
+
+            <div class="swiper-slide slide">
+                <img src="~/Images/pic-2.png" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo exercitationem ullam esse quia iusto in.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>john deo</h3>
+            </div>
+
+            <div class="swiper-slide slide">
+                <img src="~/Images/pic-3.png" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo exercitationem ullam esse quia iusto in.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>john deo</h3>
+            </div>
+
+            <div class="swiper-slide slide">
+                <img src="~/Images/pic-4.png" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo exercitationem ullam esse quia iusto in.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>john deo</h3>
+            </div>
+
+            <div class="swiper-slide slide">
+                <img src="~/Images/pic-5.png" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo exercitationem ullam esse quia iusto in.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>john deo</h3>
+            </div>
+
+            <div class="swiper-slide slide">
+                <img src="~/Images/pic-6.png" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo exercitationem ullam esse quia iusto in.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>john deo</h3>
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+</section>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<script>
+
+var swiper = new Swiper(".reviews-slider", {
+   loop:true,
+   grabCursor:true,
+            spaceBetween: 20,
+   pagination: {
+      el: ".swiper-pagination",
+   },
+   breakpoints: {
+      550: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+   },
+});
+
+</script>
