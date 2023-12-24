@@ -1,58 +1,146 @@
 ﻿@model Project_63130514.Models.MonAn
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Chi tiết";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
+<head>
+    <style>
+        .container {
+          max-width: 75%;
+          margin: auto;
+          height: 65vh;
+          margin-top: 5%;
+          background: white;
+          box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3);
+        }
+        .main_image {
+            width: 400px;
+            height: 400px;
+            padding: 40px;
+            padding-top: 60px;
+        }
+        .left, .right {
+            width: 50%;
+            padding: 30px;
+        }
 
-<h2>Details</h2>
+        .flex {
+          display: flex;
+          justify-content: space-between;
+        }
 
+        .flex1 {
+          display: flex;
+        }
+        .option img {
+          width: 75px;
+          height: 75px;
+          padding: 10px;
+        }
+
+        .right {
+          padding: 50px 100px 50px 50px;
+        }
+
+        h3 {
+          color: #af827d;
+          margin: 20px 0 20px 0;
+          font-size: 30px;
+        }
+        .mota {
+            margin: 20px 0 50px 0;
+            line-height: 25px;
+            font-size: 20px;
+        }
+        h5,
+        p,
+        small {
+          color: #837D7C;
+        }
+
+        h4 {
+            color: black;
+            font-size: 25px;
+        }
+
+        h5 {
+          font-size: 15px;
+        }
+
+        label,
+        .add span,
+        .color span {
+          width: 25px;
+          height: 25px;
+          background: #000;
+          border-radius: 50%;
+          margin: 20px 10px 20px 0;
+        }
+
+        .color span:nth-child(2) {
+          background: #EDEDED;
+        }
+
+        .color span:nth-child(3) {
+          background: #D5D6D8;
+        }
+
+        .color span:nth-child(4) {
+          background: #EFE0DE;
+        }
+
+        .color span:nth-child(5) {
+          background: #AB8ED1;
+        }
+
+        .color span:nth-child(6) {
+          background: #F04D44;
+        }
+
+        .add label,
+        .add span {
+          background: none;
+          border: 1px solid #C1908B;
+          color: #C1908B;
+          text-align: center;
+          line-height: 25px;
+        }
+
+        .add label {
+          padding: 10px 30px 0 20px;
+          border-radius: 50px;
+          line-height: 0;
+        }
+
+        button {
+          width: 100%;
+          padding: 10px;
+          border: none;
+          outline: none;
+          background: #C1908B;
+          color: white;
+          margin-top: 20%;
+          border-radius: 30px;
+        }
+    </style>
+</head>
 <div>
-    <h4>MonAn</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.TenMonAn)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TenMonAn)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Gia)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Gia)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AnhMonAn)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AnhMonAn)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.MoTa)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MoTa)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.LoaiMonAn)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.LoaiMonAn)
-        </dd>
-
-    </dl>
+    <section>
+        <div class="container flex">
+             <img src="~/Images/@Html.DisplayFor(model => model.AnhMonAn)" class="main_image">
+            <div class="right">
+                <h3>@Html.DisplayFor(model => model.TenMonAn)</h3>
+                <h4>@Html.DisplayFor(model => model.Gia)<small> vnd</small></h4>
+                <p class="mota">@Html.DisplayFor(model => model.MoTa)</p>
+                <h5>Số lượng</h5>
+                <div class="add flex1">
+                    <span>-</span>
+                    <label>1</label>
+                    <span>+</span>
+                </div>
+                <button>Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+    </section>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.MaMonAn }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

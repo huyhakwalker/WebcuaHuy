@@ -1,82 +1,70 @@
 ﻿@model Project_63130514.Models.KhachHang
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Chỉnh sửa";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký</title>
+    <style>
+        .form-container {
+            max-width: 50rem;
+            margin: 0 auto;
+            border: var(--border);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
 
-<h2>Edit</h2>
+            .form-container h3 {
+                margin-bottom: 1rem;
+                font-size: 2.5rem;
+                text-transform: uppercase;
+                color: var(--black);
+            }
 
+            .form-container .box {
+                margin: 1rem 0;
+                padding: 1.4rem;
+                color: var(--black);
+                border: var(--border);
+                font-size: 1.8rem;
+                width: 100%;
+            }
 
+            .form-container p {
+                margin-top: 1.5rem;
+                font-size: 2rem;
+                color: var(--light-color);
+            }
+
+                .form-container p a {
+                    font-size: 2rem;
+                    color: var(--red);
+                }
+
+                    .form-container p a:hover {
+                        color: var(--black);
+                    }
+    </style>
+</head>
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>KhachHang</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.MaKhachHang)
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Taikhoan, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Taikhoan, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Taikhoan, "", new { @class = "text-danger" })
-            </div>
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.MaKhachHang)
+    @Html.HiddenFor(model => model.Taikhoan)
+    <section class="form-container">
+        <div>
+            <h3>Cập nhật thông tin cá nhân</h3>
+            <input type="text" required maxlength="20" name="TenKhachHang" placeholder="Họ và tên" class="box">
+            <input type="email" required maxlength="50" name="Email" placeholder="Email" class="box">
+            <input type="text" placeholder="Số điện thoại" required class="box" name="SoDienThoai">
+            <input type="text" placeholder="Địa chỉ" required class="box" name="DiaChi">
+            <input type="password" maxlength="20" name="Matkhau" placeholder="Mật khẩu mới" class="box">
+            <input type="password" maxlength="20" name="confirm_pass" placeholder="Xác nhận mật khẩu mới" class="box">
+            <input type="submit" value="Cập nhật ngay" class="btn" name="submit">
         </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Matkhau, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Matkhau, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Matkhau, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.TenKhachHang, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.TenKhachHang, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.TenKhachHang, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.SoDienThoai, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.SoDienThoai, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.SoDienThoai, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.DiaChi, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.DiaChi, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.DiaChi, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
-            </div>
-        </div>
-    </div>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
+    </section>
 }

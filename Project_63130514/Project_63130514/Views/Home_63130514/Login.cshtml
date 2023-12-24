@@ -1,6 +1,6 @@
 ﻿@model Project_63130514.Models.KhachHang
 @{
-    ViewBag.Title = "Login";
+    ViewBag.Title = "Đăng nhập";
     Layout = "~/Views/Shared/_LayoutLoginAndRegister.cshtml";
 }
 <head>
@@ -48,7 +48,7 @@
                     }
     </style>
 </head>
-@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+@using (Html.BeginForm("Login", "Home_63130514", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
     <section class="form-container">
@@ -58,6 +58,7 @@
             <input type="password" required maxlength="20" name="password" placeholder="Mật khẩu" class="box">
             <input type="submit" value="Đăng nhập" class="btn" name="submit">
             <p>Bạn chưa có tài khoản? <a href="~/Home_63130514/Register">Đăng ký ngay</a></p>
+            <span>@ViewBag.error</span>
         </form>
     </section>
 }

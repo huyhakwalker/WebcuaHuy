@@ -15,32 +15,24 @@ namespace Project_63130514.Controllers
         private Project_63130514Entities db = new Project_63130514Entities();
         public ActionResult Index()
         {
-            return View();
+            return View(db.MonAns.ToList());
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
         public ActionResult Cart()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
         public ActionResult Checkout()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
         public ActionResult Login()
@@ -69,18 +61,15 @@ namespace Project_63130514.Controllers
                 Session["name"] = data2.FirstOrDefault().TenKhachHang;
                 Session["taikhoan"] = data2.FirstOrDefault().Taikhoan;
                 Session["id"] = data2.FirstOrDefault().MaKhachHang;
-                return RedirectToAction("Index", "Home");
+                Session["sdt"] = data2.FirstOrDefault().SoDienThoai;
+                Session["email"] = data2.FirstOrDefault().Email;
+                Session["diachi"] = data2.FirstOrDefault().DiaChi;
+                return RedirectToAction("Index", "Home_63130514");
             }
             ViewBag.error = "Tên đăng nhập hoặc mật khẩu không đúng";
             return View();
         }
         public ActionResult Orders()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-        public ActionResult UserProfile()
         {
             return View();
         }
@@ -106,7 +95,7 @@ namespace Project_63130514.Controllers
                     Session["Taikhoan"] = _user.Taikhoan;
                     Session["id"] = _user.MaKhachHang;
                     ViewBag.SuccessMessage = "Đăng ký thành công!";
-                    return RedirectToAction("Login" , "Home");
+                    return RedirectToAction("Login" , "Home_63130514");
                 }
                 else
                 {
@@ -117,16 +106,6 @@ namespace Project_63130514.Controllers
             return View();
         }
         public ActionResult Search()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-        public ActionResult Update_address()
-        {
-            return View();
-        }
-        public ActionResult Update_profile()
         {
             return View();
         }

@@ -1,17 +1,16 @@
 ﻿@model Project_63130514.Models.KhachHang
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "THÔNG TIN CHI TIẾT";
 }
 
-<h2>Details</h2>
+<h2>THÔNG TIN CHI TIẾT</h2>
 
 <div>
-    <h4>KhachHang</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Taikhoan)
+            Tài khoản:
         </dt>
 
         <dd>
@@ -19,7 +18,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Matkhau)
+            Mật khẩu:
         </dt>
 
         <dd>
@@ -27,7 +26,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.TenKhachHang)
+            Tên khách hàng:
         </dt>
 
         <dd>
@@ -35,7 +34,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.SoDienThoai)
+            Số điện thoại
         </dt>
 
         <dd>
@@ -43,7 +42,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Email)
+            Email
         </dt>
 
         <dd>
@@ -51,7 +50,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DiaChi)
+            Địa chỉ
         </dt>
 
         <dd>
@@ -61,6 +60,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.MaKhachHang }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaKhachHang }) |
+    @Html.ActionLink("Trở về", "Index")
 </p>

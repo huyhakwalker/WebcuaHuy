@@ -1,11 +1,14 @@
 ﻿@model IEnumerable<Project_63130514.Models.MonAn>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "DANH SÁCH MÓN ĂN";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
     var grid = new WebGrid(Model, canPage: true, defaultSort: "MaMonAn", rowsPerPage: 10);
 }
 <h2>DANH SÁCH MÓN ĂN</h2>
+<p>
+    @Html.ActionLink("Thêm mới", "Create")
+</p>
 <head>
     <style type="text/css">
         .grid-footer {
@@ -64,7 +67,6 @@
     grid.Column(format: (item) => Html.ActionLink("Xem chi tiết", "Details","MonAnsAdmin_63130514", new { id = item.MaMonAn },"MonAnsAdmin_63130514Controller")),
     grid.Column(format: (item) => Html.ActionLink("Chỉnh sửa", "Edit","MonAnsAdmin_63130514", new { id = item.MaMonAn },"MonAnsAdmin_63130514Controller")),
     grid.Column(format: (item) => Html.ActionLink("Xóa", "Delete","MonAnsAdmin_63130514", new { id = item.MaMonAn },"MonAnsAdmin_63130514Controller")),
-    grid.Column(format: (item) => Html.ActionLink("Thêm mới", "Create","MonAnsAdmin_63130514", new { id = item.MaMonAn },"MonAnsAdmin_63130514Controller")),
     }
    )
 </div>

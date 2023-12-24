@@ -1,18 +1,17 @@
 ﻿@model Project_63130514.Models.MonAn
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Xóa";
 }
 
-<h2>Delete</h2>
+<h2>Xóa</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Bạn có muốn xóa món ăn này không?</h3>
 <div>
-    <h4>MonAn</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.TenMonAn)
+            Tên món ăn:
         </dt>
 
         <dd>
@@ -20,7 +19,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Gia)
+            Giá:
         </dt>
 
         <dd>
@@ -28,7 +27,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.AnhMonAn)
+            Ảnh món ăn:
         </dt>
 
         <dd>
@@ -36,7 +35,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.MoTa)
+            Mô tả:
         </dt>
 
         <dd>
@@ -44,7 +43,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.LoaiMonAn)
+            Loại món ăn:
         </dt>
 
         <dd>
@@ -58,7 +57,7 @@
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            @Html.ActionLink("Trở về", "Index")
         </div>
     }
 </div>

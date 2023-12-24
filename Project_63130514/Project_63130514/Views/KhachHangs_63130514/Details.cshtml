@@ -1,66 +1,22 @@
 ﻿@model Project_63130514.Models.KhachHang
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Thông tin cá nhân";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Details</h2>
-
-<div>
-    <h4>KhachHang</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Taikhoan)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Taikhoan)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Matkhau)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Matkhau)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TenKhachHang)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TenKhachHang)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.SoDienThoai)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SoDienThoai)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.DiaChi)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DiaChi)
-        </dd>
-
-    </dl>
+<div class="heading">
+    <h3>Thông tin cá nhân</h3>
+    <p><a href="~/Home_63130514_63130514/Index">Trang chủ </a> <span> / Hồ sơ</span></p>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.MaKhachHang }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+<section class="user-details">
+    <div class="user">
+        <img src="~/Images/user-icon.png" alt="">
+        <p><i class="fas fa-user"></i> <span>@Model.TenKhachHang</span></p>
+        <p><i class="fas fa-phone"></i> <span>@Model.SoDienThoai</span></p>
+        <p><i class="fas fa-envelope"></i> <span>@Model.Email</span></p>
+        <p class="address"><i class="fas fa-map-marker-alt"></i> <span>@Model.DiaChi</span></p>
+        <a href="@Url.Action("Edit", "KhachHangs_63130514", new {id = Model.MaKhachHang})" class="btn">Cập nhật thông tin</a>
+    </div>
+</section>
+

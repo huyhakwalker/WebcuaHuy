@@ -1,58 +1,39 @@
 ﻿@model Project_63130514.Models.MonAn
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "THÔNG TIN CHI TIẾT";
 }
-
-<h2>Details</h2>
-
-<div>
-    <h4>MonAn</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.TenMonAn)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TenMonAn)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Gia)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Gia)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AnhMonAn)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AnhMonAn)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.MoTa)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MoTa)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.LoaiMonAn)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.LoaiMonAn)
-        </dd>
-
-    </dl>
-</div>
+<caption><b>THÔNG TIN CHI TIẾT</b></caption>
+<table cellpadding="0" cellspacing="0" style="font-size:14px;margin-left:50px;">
+    <tr>
+        <td>
+            <table cellpadding="2" cellspacing="10">
+                <tr>
+                    <td rowspan="8"><img src="/Images/@Html.DisplayFor(model => model.AnhMonAn)" width="100" height="100" /></td>
+                    <td>Mã món ăn:</td>
+                    <td>@Html.DisplayFor(model => model.MaMonAn)</td>
+                </tr>
+                <tr>
+                    <td>Tên món ăn:</td>
+                    <td>@Html.DisplayFor(model => model.TenMonAn)</td>
+                </tr>
+                <tr>
+                    <td>Giá:</td>
+                    <td>@Html.DisplayFor(model => model.Gia)</td>
+                </tr>
+                <tr>
+                    <td>Mô tả:</td>
+                    <td>@Html.DisplayFor(model => model.MoTa)</td>
+                </tr>
+                <tr>
+                    <td>Loại món ăn:</td>
+                    <td>@Html.DisplayFor(model => model.LoaiMonAn)</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.MaMonAn }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaMonAn }) |
+    @Html.ActionLink("Trở về", "Index")
 </p>

@@ -12,7 +12,7 @@ namespace Project_63130514.Controllers
 {
     public class MonAns_63130514Controller : Controller
     {
-        private Project_63130514Entities db = new Project_63130514Entities();
+        Project_63130514Entities db = new Project_63130514Entities();
 
         // GET: MonAns_63130514
         public ActionResult Index()
@@ -21,18 +21,10 @@ namespace Project_63130514.Controllers
         }
 
         // GET: MonAns_63130514/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            MonAn monAn = db.MonAns.Find(id);
-            if (monAn == null)
-            {
-                return HttpNotFound();
-            }
-            return View(monAn);
+            var objProduct = db.MonAns.Where(n => n.MaMonAn == id).FirstOrDefault();
+            return View(objProduct);
         }
 
         // GET: MonAns_63130514/Create

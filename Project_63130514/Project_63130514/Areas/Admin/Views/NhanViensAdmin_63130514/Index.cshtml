@@ -5,7 +5,10 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
     var grid = new WebGrid(Model, canPage: true, defaultSort: "MaNhanVien", rowsPerPage: 10);
 }
-<h2>DANH SÁCH MÓN ĂN</h2>
+<h2>DANH SÁCH NHÂN VIÊN</h2>
+<p>
+    @Html.ActionLink("Thêm mới", "Create")
+</p>
 <head>
     <style type="text/css">
         .grid-footer {
@@ -65,7 +68,6 @@
     grid.Column(format: (item) => Html.ActionLink("Xem chi tiết", "Details","NhanViensAdmin_63130514", new { id = item.MaNhanVien },"NhanViensAdmin_63130514Controller")),
     grid.Column(format: (item) => Html.ActionLink("Chỉnh sửa", "Edit","NhanViensAdmin_63130514", new { id = item.MaNhanVien },"NhanViensAdmin_63130514Controller")),
     grid.Column(format: (item) => Html.ActionLink("Xóa", "Delete","NhanViensAdmin_63130514", new { id = item.MaNhanVien },"NhanViensAdmin_63130514Controller")),
-    grid.Column(format: (item) => Html.ActionLink("Thêm mới", "Create","NhanViensAdmin_63130514", new { id = item.MaNhanVien },"NhanViensAdmin_63130514Controller")),
     }
    )
 </div>

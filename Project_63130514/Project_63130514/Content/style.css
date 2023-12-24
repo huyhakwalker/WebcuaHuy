@@ -187,7 +187,6 @@ section{
 .header .flex .profile .account{
    font-size: 1.7rem;
    color:var(--light-color);
-   margin-top: 1.5rem;
 }
 
 .header .flex .profile .account a{
@@ -648,10 +647,6 @@ section{
 .user-details .user i{
    margin-right: .7rem;
    color:var(--light-color);
-}
-
-.user-details .user p.address{
-   margin-top: 2rem;
 }
 
 .form-container form{

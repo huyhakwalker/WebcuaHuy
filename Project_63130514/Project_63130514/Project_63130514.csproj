@@ -452,10 +452,7 @@
     <Content Include="Views\Home_63130514\Contact.cshtml" />
     <Content Include="Views\Home_63130514\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
-    <Content Include="Views\MonAns_63130514\Create.cshtml" />
-    <Content Include="Views\MonAns_63130514\Delete.cshtml" />
     <Content Include="Views\MonAns_63130514\Details.cshtml" />
-    <Content Include="Views\MonAns_63130514\Edit.cshtml" />
     <Content Include="Views\MonAns_63130514\Index.cshtml" />
     <Content Include="Views\Home_63130514\Cart.cshtml" />
     <Content Include="Views\Home_63130514\Checkout.cshtml" />
@@ -463,14 +460,8 @@
     <Content Include="Views\Home_63130514\Orders.cshtml" />
     <Content Include="Views\Home_63130514\Register.cshtml" />
     <Content Include="Views\Home_63130514\Search.cshtml" />
-    <Content Include="Views\Home_63130514\Update_address.cshtml" />
-    <Content Include="Views\Home_63130514\Update_profile.cshtml" />
-    <Content Include="Views\Home_63130514\UserProfile.cshtml" />
-    <Content Include="Views\KhachHangs_63130514\Create.cshtml" />
-    <Content Include="Views\KhachHangs_63130514\Delete.cshtml" />
     <Content Include="Views\KhachHangs_63130514\Details.cshtml" />
     <Content Include="Views\KhachHangs_63130514\Edit.cshtml" />
-    <Content Include="Views\KhachHangs_63130514\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutLoginAndRegister.cshtml" />
   </ItemGroup>
   <ItemGroup>

@@ -1,20 +1,20 @@
 ﻿@model IEnumerable<Project_63130514.Models.MonAn>
 
 @{
-    ViewBag.Title = "Cart";
+    ViewBag.Title = "Giỏ hàng";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
 <div class="heading">
     <h3>Giỏ hàng</h3>
-    <p><a href="~/Home/Index">Trang chủ </a> <span> / Giỏ hàng</span></p>
+    <p><a href="~/Home_63130514/Index">Trang chủ </a> <span> / Giỏ hàng</span></p>
 </div>
 
 <section class="products">
     <h1 class="title">Giỏ hàng của bạn</h1>
 
     <div class="cart-total">
-        <p>grand total : <span>$9/-</span></p>
+        <p>Tổng tiền : <span>$9/-</span></p>
         <a href="~/Home_63130514/Checkout" class="btn">thanh toán</a>
     </div>
 
@@ -30,7 +30,7 @@
                 <input type="number" name="qty" class="qty" min="1" max="99" value="1" onkeypress="if(this.value.length == 2) return false;">
                 <button type="submit" class="fas fa-edit"></button>
             </div>
-            <div class="sub-total">sub total : <span>$3</span></div>
+            <div class="sub-total">Tổng tiền sản phẩm : <span>$3</span></div>
         </div>
 
         <div class="box">
@@ -43,7 +43,7 @@
                 <input type="number" name="qty" class="qty" min="1" max="99" value="1" onkeypress="if(this.value.length == 2) return false;">
                 <button type="submit" class="fas fa-edit"></button>
             </div>
-            <div class="sub-total">sub total : <span>$3</span></div>
+            <div class="sub-total">Tổng tiền sản phẩm : <span>$3</span></div>
         </div>
 
         <div class="box">
@@ -56,7 +56,7 @@
                 <input type="number" name="qty" class="qty" min="1" max="99" value="1" onkeypress="if(this.value.length == 2) return false;">
                 <button type="submit" class="fas fa-edit"></button>
             </div>
-            <div class="sub-total">sub total : <span>$3</span></div>
+            <div class="sub-total">Tổng tiền sản phẩm : <span>$3</span></div>
         </div>
 
     </div>

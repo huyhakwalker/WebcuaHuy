@@ -30,14 +30,20 @@
                 <div id="user-btn" class="fas fa-user"></div>
                 <div id="menu-btn" class="fas fa-bars"></div>
             </div>
-
+            
             <div class="profile">
-                <p class="name">Nguyễn Quốc Huy</p>
-                <div class="flex">
-                    <a href="~/KhachHangs_63130514/Details" class="btn">Hồ sơ</a>
-                    <a href="~/Home_63130514/Login" class="delete-btn">Đăng xuất</a>
-                </div>
-                <p class="account"><a href="~/Home_63130514/Login">Đăng nhập</a> or <a href="~/Home_63130514/Register">Đăng ký</a></p>
+                @if (Session["id"] != null)
+                {
+                    <p class="name"></p>
+                    <div class="flex">
+                        <a href="@Url.Action("Details", "KhachHangs_63130514", new {id = Session["id"]})" class="btn">@Session["name"]</a>
+                        <a href="~/Home_63130514/Login" class="delete-btn">Đăng xuất</a>
+                    </div>
+                }
+                else
+                {
+                    <p class="account"><a href="~/Home_63130514/Login">Đăng nhập</a> or <a href="~/Home_63130514/Register">Đăng ký</a></p>
+                }
             </div>
         </section>
     </header>
@@ -76,7 +82,7 @@
 
         </section>
 
-        <div class="credit">&copy; copyright  2022 by <span>mr. web designer</span> | all rights reserved!</div>
+        <div class="credit">Design 2023 by <span>Nguyễn Quốc Huy</span> | 63.CNTT-CLC1</div>
 
     </footer>
     <div class="loader">

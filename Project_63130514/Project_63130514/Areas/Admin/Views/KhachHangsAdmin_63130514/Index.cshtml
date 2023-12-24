@@ -1,11 +1,14 @@
 ﻿@model IEnumerable<Project_63130514.Models.KhachHang>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "DANH SÁCH KHÁCH HÀNG";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
     var grid = new WebGrid(Model, canPage: true, defaultSort: "MaKhachHang", rowsPerPage: 10);
 }
-<h2>DANH SÁCH MÓN ĂN</h2>
+<h2>DANH SÁCH KHÁCH HÀNG</h2>
+<p>
+    @Html.ActionLink("Thêm mới", "Create")
+</p>
 <head>
     <style type="text/css">
         .grid-footer {
@@ -65,7 +68,6 @@
     grid.Column(format: (item) => Html.ActionLink("Xem chi tiết", "Details","KhachHangsAdmin_63130514", new { id = item.MaKhachHang },"KhachHangsAdmin_63130514Controller")),
     grid.Column(format: (item) => Html.ActionLink("Chỉnh sửa", "Edit","KhachHangsAdmin_63130514", new { id = item.MaKhachHang },"KhachHangsAdmin_63130514Controller")),
     grid.Column(format: (item) => Html.ActionLink("Xóa", "Delete","KhachHangsAdmin_63130514", new { id = item.MaKhachHang },"KhachHangsAdmin_63130514Controller")),
-    grid.Column(format: (item) => Html.ActionLink("Thêm mới", "Create","KhachHangsAdmin_63130514", new { id = item.MaKhachHang },"KhachHangsAdmin_63130514Controller")),
     }
    )
 </div>
