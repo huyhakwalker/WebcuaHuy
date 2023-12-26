@@ -94,7 +94,7 @@
             }
             <form accept="" method="post" class="box">
                 <a href="@Url.Action("Details", "MonAns_63130514", new {id = item.MaMonAn})" class="fas fa-eye"></a>
-                <button class="fas fa-shopping-cart" name="add_to_cart"></button>
+                <button  type="button" class="fas fa-shopping-cart" name="add_to_cart"></button>
                 <img src="/Images/@Html.DisplayFor(model => item.AnhMonAn)" alt="">
                 <a href="category.html" class="cat">@Html.DisplayFor(modelItem => item.LoaiMonAn)</a>
                 <div class="name">@Html.DisplayFor(modelItem => item.TenMonAn)</div>

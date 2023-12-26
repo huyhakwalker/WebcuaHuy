@@ -15,9 +15,18 @@ namespace Project_63130514.Areas.Admin.Controllers
         private Project_63130514Entities db = new Project_63130514Entities();
 
         // GET: Admin/MonAnsAdmin_63130514
-        public ActionResult Index()
+        [HttpGet]
+        public ActionResult Index(string maMA, string tenMA)
         {
-            return View(db.MonAns.ToList());
+            if(maMA == null || tenMA == null)
+            {
+                return View(db.MonAns.ToList());
+            }
+            else
+            {
+                var monans = db.MonAns.SqlQuery("exec MonAn_TimKiem '" + maMA + "' ,N'" + tenMA + "'");
+                return View(monans.ToList());
+            }
         }
 
         // GET: Admin/MonAnsAdmin_63130514/Details/5

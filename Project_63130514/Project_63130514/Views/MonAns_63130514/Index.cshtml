@@ -8,6 +8,19 @@
     <h3>Menu</h3>
     <p><a href="~/Home_63130514/Index">Trang chủ </a> <span> / Menu</span></p>
 </div>
+@using (Html.BeginForm("Index", "MonAns_63130514", FormMethod.Get))
+{
+    @Html.AntiForgeryToken()
+    <section style="display: flex; gap: 1rem;" class="search-form">
+        <form action="@Url.Action("Index", "MonAns_63130514")" method="get" style="display: flex; gap: 1rem;">
+            <input type="text" class="box" name="tenMA" value="@ViewBag.tenMA" maxlength="100" style="width: 100%; padding: 1.4rem; font-size: 1.8rem; border: var(--border); color: var(--black);">
+            <button type="submit" class="fas fa-search" name="search_btn" style="width: 6rem; font-size: 2rem; background-color: var(--black); color: var(--white); cursor: pointer;"
+                    onmouseover="this.style.backgroundColor='var(--yellow)'; this.style.color='var(--black)';"
+                    onmouseout="this.style.backgroundColor='var(--black)'; this.style.color='var(--white)';">
+            </button>
+        </form>
+    </section>
+}
 <section class="products">
 
     <h1 class="title">MENU</h1>
@@ -17,7 +30,7 @@
         {
             <form accept="" method="post" class="box">
                 <a href="@Url.Action("Details", "MonAns_63130514", new {id = item.MaMonAn})" class="fas fa-eye"></a>
-                <button class="fas fa-shopping-cart" name="add_to_cart"></button>
+                <button type="button" class="fas fa-shopping-cart" name="add_to_cart"></button>
                 <img src="/Images/@Html.DisplayFor(model => item.AnhMonAn)" alt="">
                 <a href="category.html" class="cat">@Html.DisplayFor(modelItem => item.LoaiMonAn)</a>
                 <div class="name">@Html.DisplayFor(modelItem => item.TenMonAn)</div>

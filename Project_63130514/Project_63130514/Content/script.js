@@ -1,4 +1,4 @@
-let navbar = document.querySelector('.header .flex .navbar');
+﻿let navbar = document.querySelector('.header .flex .navbar');
 let profile = document.querySelector('.header .flex .profile');
 
 document.querySelector('#menu-btn').onclick = () =>{

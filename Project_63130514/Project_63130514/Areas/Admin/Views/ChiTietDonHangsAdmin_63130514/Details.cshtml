@@ -1,0 +1,27 @@
+﻿@model Project_63130514.Models.ChiTietDonHang
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ChiTietDonHang</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dd>
+            Mã đơn hàng: @Html.DisplayFor(model => model.DonHang.MaDonHang)
+        </dd>
+        <dd>
+            Tên món ăn: @Html.DisplayFor(model => model.MonAn.TenMonAn)
+        </dd>
+        <dd>
+            Số lượng: @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Trở về", "Index", "DonHangsAdmin_63130514")
+</p>

@@ -130,6 +130,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\ChiTietDonHangsAdmin_63130514Controller.cs" />
+    <Compile Include="Areas\Admin\Controllers\DonHangsAdmin_63130514Controller.cs" />
     <Compile Include="Areas\Admin\Controllers\KhachHangsAdmin_63130514Controller.cs" />
     <Compile Include="Areas\Admin\Controllers\MonAnsAdmin_63130514Controller.cs" />
     <Compile Include="Areas\Admin\Controllers\NhanViensAdmin_63130514Controller.cs" />
@@ -426,6 +428,9 @@
     <Content Include="Areas\Admin\Views\NhanViensAdmin_63130514\Details.cshtml" />
     <Content Include="Areas\Admin\Views\NhanViensAdmin_63130514\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\NhanViensAdmin_63130514\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\DonHangsAdmin_63130514\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\DonHangsAdmin_63130514\DoanhThu.cshtml" />
+    <Content Include="Areas\Admin\Views\ChiTietDonHangsAdmin_63130514\Details.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

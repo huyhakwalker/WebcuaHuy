@@ -11,7 +11,8 @@ namespace Project_63130514.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class DonHang
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,6 +23,9 @@ namespace Project_63130514.Models
     
         public int MaDonHang { get; set; }
         public int MaKhachHang { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        public string NgayDatFormatted => NgayDat.ToString("dd/MM/yyyy");
         public System.DateTime NgayDat { get; set; }
         public int TongTien { get; set; }
         public Nullable<int> TinhTrang { get; set; }

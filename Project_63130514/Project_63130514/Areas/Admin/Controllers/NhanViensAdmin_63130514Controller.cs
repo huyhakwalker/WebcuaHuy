@@ -15,9 +15,18 @@ namespace Project_63130514.Areas.Admin.Controllers
         private Project_63130514Entities db = new Project_63130514Entities();
 
         // GET: Admin/NhanViensAdmin_63130514
-        public ActionResult Index()
+        [HttpGet]
+        public ActionResult Index(string maNV, string tenNV)
         {
-            return View(db.NhanViens.ToList());
+            if(maNV == null || tenNV == null)
+            {
+                return View(db.NhanViens.ToList());
+            }
+            else
+            {
+                var nhanviens = db.NhanViens.SqlQuery("exec NhanVien_TimKiem '" + maNV + "' ,N'" + tenNV + "'");
+                return View(nhanviens.ToList());
+            }
         }
 
         // GET: Admin/NhanViensAdmin_63130514/Details/5

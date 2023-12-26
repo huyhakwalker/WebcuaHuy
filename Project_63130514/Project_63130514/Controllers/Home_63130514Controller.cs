@@ -108,6 +108,7 @@ namespace Project_63130514.Controllers
         public ActionResult Search()
         {
             return View();
+
         }
         public ActionResult Logout()
         {

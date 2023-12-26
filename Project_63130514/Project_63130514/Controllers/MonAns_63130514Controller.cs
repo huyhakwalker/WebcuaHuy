@@ -15,9 +15,14 @@ namespace Project_63130514.Controllers
         Project_63130514Entities db = new Project_63130514Entities();
 
         // GET: MonAns_63130514
-        public ActionResult Index()
+        [HttpGet]
+        public ActionResult Index(string tenMA)
         {
-            return View(db.MonAns.ToList());
+            var monans = string.IsNullOrEmpty(tenMA)
+                ? db.MonAns.ToList()
+                : db.MonAns.Where(m => m.TenMonAn.Contains(tenMA)).ToList();
+
+            return View(monans);
         }
 
         // GET: MonAns_63130514/Details/5

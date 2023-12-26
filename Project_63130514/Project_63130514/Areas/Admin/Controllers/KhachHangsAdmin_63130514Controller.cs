@@ -15,9 +15,18 @@ namespace Project_63130514.Areas.Admin.Controllers
         private Project_63130514Entities db = new Project_63130514Entities();
 
         // GET: Admin/KhachHangsAdmin_63130514
-        public ActionResult Index()
+        [HttpGet]
+        public ActionResult Index(string maKh, string tenKH)
         {
-            return View(db.KhachHangs.ToList());
+            if(maKh == null || tenKH == null)
+            {
+                return View(db.KhachHangs.ToList());
+            }
+            else
+            {
+                var khachhangs = db.KhachHangs.SqlQuery("exec KhachHang_TimKiem '" + maKh + "' ,N'" + tenKH + "'");
+                return View(khachhangs.ToList());
+            }
         }
 
         // GET: Admin/KhachHangsAdmin_63130514/Details/5
