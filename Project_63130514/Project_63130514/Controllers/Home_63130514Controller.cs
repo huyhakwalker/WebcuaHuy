@@ -105,11 +105,6 @@ namespace Project_63130514.Controllers
             }
             return View();
         }
-        public ActionResult Search()
-        {
-            return View();
-
-        }
         public ActionResult Logout()
         {
             Session.Clear();

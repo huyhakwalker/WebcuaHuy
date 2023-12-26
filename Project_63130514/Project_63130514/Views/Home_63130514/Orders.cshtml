@@ -11,33 +11,20 @@
 <section class="orders">
 
     <h1 class="title">Đơn hàng đã đặt</h1>
+    @if (Session["id"] != null)
+    {
+        <div class="box-container">
 
-    <div class="box-container">
-
-        <div class="box">
-            <p> placed on : <span>5-29-2022</span> </p>
-            <p> name : <span>shaikh anas</span> </p>
-            <p> number : <span>1234567899</span> </p>
-            <p> email : <span>shaikhanas@gmail.com</span> </p>
-            <p> address : <span>jogeshwari, mumbai, india - 400103</span> </p>
-            <p> your orders : <span>pizza 01 (1) - main dish 02 (3) -</span> </p>
-            <p> total price : <span>$12/-</span> </p>
-            <p> payment method : <span>cash on delivery</span> </p>
-            <p> payment status : <span>pending</span> </p>
+            <div class="box">
+                <p> Tên món : <span>Bún riêu cua</span> </p>
+                <p> Tổng tiền : <span>50000 vnd</span> </p>
+                <p> Phương thức thanh toán : <span>Thanh toán khi nhận hàng</span> </p>
+                <p> Tình trạng : <span>Chờ duyệt</span> </p>
+            </div>
         </div>
-
-        <div class="box">
-            <p> placed on : <span>5-29-2022</span> </p>
-            <p> name : <span>shaikh anas</span> </p>
-            <p> number : <span>1234567899</span> </p>
-            <p> email : <span>shaikhanas@gmail.com</span> </p>
-            <p> address : <span>jogeshwari, mumbai, india - 400103</span> </p>
-            <p> your orders : <span>pizza 01 (1) - main dish 02 (3) -</span> </p>
-            <p> total price : <span>$12/-</span> </p>
-            <p> payment method : <span>cash on delivery</span> </p>
-            <p> payment status : <span>pending</span> </p>
-        </div>
-
-    </div>
-
+    }
+    else
+    {
+        <h3 style="text-align:center">Vui lòng đăng nhập</h3>
+    }
 </section>

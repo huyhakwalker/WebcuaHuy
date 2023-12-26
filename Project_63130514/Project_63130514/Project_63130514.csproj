@@ -462,12 +462,11 @@
     <Content Include="Views\Home_63130514\Cart.cshtml" />
     <Content Include="Views\Home_63130514\Checkout.cshtml" />
     <Content Include="Views\Home_63130514\Login.cshtml" />
-    <Content Include="Views\Home_63130514\Orders.cshtml" />
     <Content Include="Views\Home_63130514\Register.cshtml" />
-    <Content Include="Views\Home_63130514\Search.cshtml" />
     <Content Include="Views\KhachHangs_63130514\Details.cshtml" />
     <Content Include="Views\KhachHangs_63130514\Edit.cshtml" />
     <Content Include="Views\Shared\_LayoutLoginAndRegister.cshtml" />
+    <Content Include="Views\Home_63130514\Orders.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
